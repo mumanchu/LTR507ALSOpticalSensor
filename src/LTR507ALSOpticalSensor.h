@@ -523,8 +523,9 @@ bool LTR507ALSOpticalSensor::readRegisters(REG reg, byte* values, uint length)
 		return false;
 	}
 	if (wire->requestFrom(i2cAdds, length) != length) {
-		LOGERROR("requestFrom failed");
-		return false;
+		//avoid the bug in Arduino's Wire.cpp
+		//LOGERROR("requestFrom failed");
+		//return false;
 	}
 	if (wire->readBytes(values, length) != length) {
 		LOGERROR("readBytes failed");
