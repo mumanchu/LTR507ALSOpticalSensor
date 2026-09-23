@@ -6,6 +6,10 @@
 
 #include <Wire.h>
 
+// for uint and ulong 
+typedef unsigned int uint;
+typedef unsigned long ulong;
+
 // This is useful for debug output
 #ifdef DEBUG
 void LogError(char* msg, char* file, unsigned int line)
@@ -26,10 +30,8 @@ void LogError(char* msg, char* file, unsigned int line)
 #define ASSERT(b)
 #endif
 
-
 #include "LTR507ALSOpticalSensor.h"
 LTR507ALSOpticalSensor ltr;
-
 
 void setup() 
 {
