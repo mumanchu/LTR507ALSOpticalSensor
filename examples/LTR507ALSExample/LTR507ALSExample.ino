@@ -1,6 +1,8 @@
+////////////////////////////////////////////////////////////////////////////////
 // Example sketch for the LTR-507 Ambient Light Sensor
 // Copyright (C) muman.ch, 2025.09.08
-// email: info@muman.ch
+// info@muman.ch
+// https://github.com/mumanchu/LTR507ALSOpticalSensor
 // See the blog post for details
 // https://muman.ch/muman/index.htm?muman-light-sensors.htm
 
