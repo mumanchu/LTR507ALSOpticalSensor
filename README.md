@@ -54,7 +54,7 @@ The `ALS_IRF_CUT_OFF` register does not seem to exist in later sensors from Lite
 
 ## Automatic Gain Selection
 
-The code contains a unique function called autoSelectGain(long lux) which automatically sets the optimal gain (x1 .. x200) for the lux value returned by readLux(). It returns true if the gain was changed. If saturation or overflow has occurred (lux = -1) it will set the range to 0 (0..65535 lux, the default), so the next read will (hopefully) return a valid value. See the example sketch.
+The code contains a unique function called `autoSelectGain(long lux)` which automatically sets the optimal gain (x1 .. x200) for the lux value returned by `readLux()`. It returns `true` if the gain was changed. If saturation or overflow has occurred (lux = -1) it will set the range to 0 (0..65535 lux, the default), so the next read will (hopefully) return a valid value. See the example sketch.
 
 The code could be modified to switch between only two gain settings instead of four, e.g. 1x for high lux values (0..65535) and 200x for low lux values (0..326). This may make more sense.
 
@@ -71,7 +71,7 @@ _Note that the Address Selection section on the SolderedElectronics website is w
 
 ## Proximity Sensor's External IR LED
 
-The Proximity Sensor (PS) requires an external infrared LED to be connected. It flashes the IR LED at a programmed rate. You can program the pulse frequency, peak current and pulse count with `configurePS()`. The reflected IR light determines the distance of an object, depending on its IR reflectivity. The distance is returned as an arbitrary value by readProximity(). This value is not in mm or cm, it's just the ADC value, so it must be calibrated/converted if you need an actual distance.
+The Proximity Sensor (PS) requires an external infrared LED to be connected. It flashes the IR LED at a programmed rate. You can program the pulse frequency, peak current and pulse count with `configurePS()`. The reflected IR light determines the distance of an object, depending on its IR reflectivity. The distance is returned as an arbitrary value by `readProximity()`. This value is not in mm or cm, it's just the ADC value, so it must be calibrated/converted if you need an actual distance.
 
 Connect the IR LED between the VLED output and VCC (+3.3V). The LED is turned on when the VLED output is pulled to GND by the chip. The LED current is limited by peakCurrent, so you don't need a series resistor.
 
