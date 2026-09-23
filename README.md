@@ -90,7 +90,7 @@ The code detects saturation when the lux value overflows the gain setting, or if
 class LTR507ALSOpticalSensor
 {
 public:
- bool begin(TwoWire* wire, int i2cAddress);
+	bool begin(TwoWire* wire, int i2cAddress);
 	bool softwareReset();
 	bool readIDs(uint* partNumberID, uint* revisionID, uint* manufacturerID);
 	bool setMode(bool alsActive, bool psActive);
@@ -99,8 +99,8 @@ public:
 	bool readLux(float* lux, bool* newData);
 	bool readRawLux(long* lux, bool* newData);
 	bool readProximity(uint* proximity, bool* overflow);
-	bool readStatus(uint* interruptSource, bool* alsInterruptStatus, bool* alsDataStatus, 
-   bool* psInterruptStatus, bool* psDataStatus);
+	bool readStatus(uint* interruptSource, bool* alsInterruptStatus, 
+		bool* alsDataStatus, bool* psInterruptStatus, bool* psDataStatus);
 	bool readRawAdcValues(ulong* adcCh1, ulong* adcCh2);
 	bool autoSelectGain(long lux);
 	
