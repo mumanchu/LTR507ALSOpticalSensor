@@ -1,8 +1,10 @@
 #pragma once
 
+//////////////////////////////////////////////////////////////////////////////////////////
 // LiteOn LTR-507ALS Optical Sensor with I2C interface
 // Copyright (C) muman.ch, 2025.09.05
 // info@muman.ch
+// https://github.com/mumanchu/LTR507ALSOpticalSensor
 /*
 See the muman blog for details
 https://muman.ch/muman/index.htm?muman-light-sensors.htm
