@@ -26,7 +26,7 @@ I think there's a problem with the chip's handling of saturation. If the level g
 
 <img src="images/lux-sensor-saturation.png" alt="Lux Sensor Saturation Graph" width="300">
 
-If the lux value is 0, how do we know it is because of saturation or because there is no light and 0 lux is the correct value? If at the maximum level, how do we know if the internal calculation has overflowed? Unfortunately, the LTR-507 does not have an "overflow" or "saturation" bit for the lux value (it's only for the PS value). But the muman library has added features which handle both these situations...
+If the lux value is 0, how do we know it is because of saturation or because there is no light and 0 lux is the correct value? If at the maximum level, how do we know if the internal calculation has overflowed? Unfortunately, the LTR-507 does not have an "overflow" or "saturation" bit for the lux value (it's only for the PS value). But this _mumanchu_ library has added features which handle both these situations...
 
 If the raw lux reading is zero, it checks the channel 0 analog reading. If that is also zero then it assumes no light and returns 0 lux. But if the channel 0 reading is not zero, it means that overflow has occurred and it returns an impossible lux reading of -1.
 
@@ -50,7 +50,7 @@ In my tests "* 256" worked very well. You can test this yourself using an incand
 Ref. data sheet section 6.16 ALS_IRF_CUT_OFF Register (0x97): \
 https://optoelectronics.liteon.com/upload/download/DS86-2013-0014/LTR-507ALS-01_FINAL%20DS.pdf#page=26
 
-The ALS_IRF_CUT_OFF register does not seem to exist in later sensors from LiteOn.
+The `ALS_IRF_CUT_OFF` register does not seem to exist in later sensors from LiteOn.
 
 ## Automatic Gain Selection
 
@@ -60,8 +60,8 @@ The code could be modified to switch between only two gain settings instead of f
 
 ## I2C Slave Address
 
-The address is selected by connecting the SEL pin to GND, VCC or leaving it floating. See JP3.
-Note that the Address Selection section on the SolderedElectronics website is wrong!
+The address is selected by connecting the SEL pin to GND, VCC or leaving it floating. See JP3. \
+_Note that the Address Selection section on the SolderedElectronics website is wrong!_
 
 | SEL      | I2C Address |
 |:---------|:---------   |
@@ -128,7 +128,7 @@ https://muman.ch/muman/index.htm?muman-light-sensors.htm
 **LTR-507ALS data sheet** \
 https://optoelectronics.liteon.com/upload/download/DS86-2013-0014/LTR-507ALS-01_FINAL%20DS.pdf
 
-Here's the overview of the module on the SolderedElectronics website. On the left of the window you will see a table-of-contents where you can view the Overview, Hardware Details, How It Works, and their own Arduino Library (but my library is better ;-) \ 
+Here's the overview of the module on the SolderedElectronics website. On the left of the window you will see a table-of-contents where you can view the Overview, Hardware Details, How It Works, and their own Arduino Library (the _mumanchu_ library is better ;-) 
 https://soldered.com/documentation/ltr-507/overview/
 
 This is the SolderedElectronics library for this chip. The same code is used for the official Arduino library. \
@@ -153,6 +153,9 @@ https://optoelectronics.liteon.com/upload/download/DS86-2018-0007/LTR-381RGB-01_
 
 
 ## Joke of the Week
+
+You were supposed to steal the _bullion_, not the _bouillon_, you fules!
+
 
 
 
