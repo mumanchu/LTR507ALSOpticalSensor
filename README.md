@@ -122,17 +122,20 @@ public:
 
 ## References
 
+You can find details of other sensors in the original blog post, \
+https://muman.ch/muman/index.htm?muman-light-sensors.htm
+
 **LTR-507ALS data sheet** \
 https://optoelectronics.liteon.com/upload/download/DS86-2013-0014/LTR-507ALS-01_FINAL%20DS.pdf
 
 Here's the overview of the module on the SolderedElectronics website. On the left of the window you will see a table-of-contents where you can view the Overview, Hardware Details, How It Works, and their own Arduino Library (but my library is better ;-) \ 
 https://soldered.com/documentation/ltr-507/overview/
 
-This is the SolderedElectronics library for this chip. The same code is used for the "official" Arduino library. \
+This is the SolderedElectronics library for this chip. The same code is used for the official Arduino library. \
 https://github.com/SolderedElectronics/Soldered-Digital-Light-Sensor-Arduino-Library/tree/main/src \
 https://docs.arduino.cc/libraries/soldered-ltr-507-arduino-library/
 
-I did not find any other libraries for this chip and it's no longer advertised on their website. However, LiteOn has a lot of new light sensors, which seem very good... \
+I did not find any other libraries for this chip, and it's no longer advertised on their website. However, LiteOn has a lot of new light sensors which seem very good... \
 https://optoelectronics.liteon.com/upload/media/service/Publications/2017OpticalSensor/2017OpticalSensor.pdf \
 https://optoelectronics.liteon.com/en-global/Led/LED-Component/Detail/926
 
