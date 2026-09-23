@@ -4,7 +4,7 @@
 
 <img src="images/ltr507-1.png" alt="Soldered LTR-507ALS Breakout Board" width="300">
 
-The LTR-507 has a couple of problems (see below) and LiteOn is not advertising it anymore. Maybe that's why these modules are cheap. The more recent LiteOn chips are better, like the improved LTR-329.
+The LTR-507 has a couple of problems (see below) and LiteOn is not advertising it anymore. Maybe that's why these modules are so cheap. The more recent LiteOn chips are better, like the improved LTR-329.
 
 This 3.3V chip has two functions, an Ambient Light Sensor (ALS) and a Proximity Sensor (PS). It computes the (hopefully accurate) lux value internally, so you don't need any dubious code to do the job. It also has a fully programmable interrupt pin (INT), which can signal the MCU when the light level is outside, or inside, a programmed range. It has two sensors, one for visible and infrared light (channel 1, CH1), and another for only (mostly) infrared light (channel 2, CH2). The lux value (the light level visible to the human eye) is calculated from channel 1 by removing the infrared component of channel 2.
 
