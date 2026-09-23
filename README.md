@@ -54,7 +54,7 @@ The `ALS_IRF_CUT_OFF` register does not seem to exist in later sensors from Lite
 
 ## Automatic Gain Selection
 
-The code contains a unique function called `autoSelectGain(long lux)` which automatically sets the optimal gain (x1 .. x200) for the lux value returned by `readLux()`. It returns `true` if the gain was changed. If saturation or overflow has occurred (lux = -1) it will set the range to 0 (0..65535 lux, the default), so the next read will (hopefully) return a valid value. See the example sketch.
+This library contains a unique function called `autoSelectGain(long lux)` which automatically sets the optimal gain (x1 .. x200) for the lux value returned by `readLux()`. It returns `true` if the gain was changed. If saturation or overflow has occurred (lux = -1) it will set the range to 0 (0..65535 lux, the default), so the next read will (hopefully) return a valid value. See the example sketch.
 
 The code could be modified to switch between only two gain settings instead of four, e.g. 1x for high lux values (0..65535) and 200x for low lux values (0..326). This may make more sense.
 
