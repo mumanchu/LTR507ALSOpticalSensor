@@ -6,6 +6,8 @@
 
 #include <Wire.h>
 
+#define DEBUG
+
 // for uint and ulong 
 typedef unsigned int uint;
 typedef unsigned long ulong;
