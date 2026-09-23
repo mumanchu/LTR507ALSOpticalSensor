@@ -82,7 +82,7 @@ The `readProximity()` method returns the proximity detection distance as the raw
 
 ## Class Reference
 
-The C++ code was written and tested on a 32-bit STM32 Nucleo board, but it should run on most Arduino-style boards with minimal changes. My version provides more features than the official library, and I think it's easier to understand thanks to the copious comments. The code uses uint and ulong, the standard abbreviations for unsigned int and unsigned long. On a 32-bit device these are both 32-bit values. On a 16-bit device, uint is 16 bits and ulong is 32 bits, but everything should work for both.
+The C++ code was written and tested on a 32-bit STM32 Nucleo board, but it should run on most Arduino-style boards with minimal changes. This library provides more features than the official library, and I think it's easier to understand thanks to the copious comments. The code uses `uint` and `ulong`, the standard abbreviations for `unsigned int` and `unsigned long`. On a 32-bit device these are both 32-bit values. On a 16-bit device, uint is 16 bits and ulong is 32 bits, but everything should work for both.
 
 The code detects saturation when the lux value overflows the gain setting, or if there's too much infrared light. If the lux register value is 0 (`ALS_DATA` = 0) and the ADC register CH1 is not zero, the code returns a negative lux value (-1) so you can tell the difference between an invalid reading and total darkness. The other libraries do not seem to detect this. This also returns -1 if the `ALS_IRF_CUT_OFF` level is exceeded.
 
@@ -119,18 +119,6 @@ public:
 	bool readALSIRFCutoff(uint* cutoff);
 };
 ```
-
-```cpp
-// for uint and ulong 
-typedef unsigned int uint;
-typedef unsigned long ulong;
-```
-
-
-
-
-
- 
 
 ## References
 
